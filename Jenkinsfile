@@ -25,7 +25,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 echo "doing TESTING stuff.."
-                python usb_run.py
+                pwd
                 '''
             }
         }
