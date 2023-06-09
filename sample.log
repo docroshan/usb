@@ -1,0 +1,68 @@
+2023-05-02 12:44:20,363 - INFO - ******************** usb_1_0.py Test Case Started ********************
+2023-05-02 12:44:20,680 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:20,935 - INFO - Authentication (password) successful!
+2023-05-02 12:44:21,117 - INFO - USB Unmounted
+2023-05-02 12:44:21,633 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:21,890 - INFO - Authentication (password) successful!
+2023-05-02 12:44:23,095 - INFO - USB Formatted
+2023-05-02 12:44:23,611 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:23,852 - INFO - Authentication (password) successful!
+2023-05-02 12:44:24,016 - INFO - USB Ejected
+2023-05-02 12:44:24,532 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:24,763 - INFO - Authentication (password) successful!
+2023-05-02 12:44:24,915 - INFO - USB Reconnected
+2023-05-02 12:44:25,429 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:25,612 - INFO - Authentication (password) successful!
+2023-05-02 12:44:26,304 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:26,532 - INFO - Authentication (password) successful!
+2023-05-02 12:44:27,245 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:27,490 - INFO - Authentication (password) successful!
+2023-05-02 12:44:27,691 - INFO - USB Renamed
+2023-05-02 12:44:28,908 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:29,153 - INFO - Authentication (password) successful!
+2023-05-02 12:44:29,331 - INFO - Expected Results:fubeus
+2023-05-02 12:44:29,333 - INFO - Actual Results:fubeus
+2023-05-02 12:44:29,333 - INFO - Name matched !!
+2023-05-02 12:44:29,333 - INFO - 
+	Pass
+2023-05-02 12:44:30,850 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:31,102 - INFO - Authentication (password) successful!
+2023-05-02 12:44:31,775 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:32,035 - INFO - Authentication (password) successful!
+2023-05-02 12:44:32,223 - INFO - USB Ejected
+2023-05-02 12:44:32,738 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:32,970 - INFO - Authentication (password) successful!
+2023-05-02 12:44:33,155 - INFO - USB Reconnected
+2023-05-02 12:44:33,156 - INFO - USB renamed to it's original name
+2023-05-02 12:44:33,156 - INFO - USB Renamed To Original Name
+2023-05-02 12:44:33,157 - INFO - ******************** usb_1_0.py Test Case Completed ********************
+2023-05-02 12:44:33,488 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:33,748 - INFO - Authentication (password) successful!
+2023-05-02 12:44:34,000 - INFO - USB Unmounted
+2023-05-02 12:44:34,516 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:34,763 - INFO - Authentication (password) successful!
+2023-05-02 12:44:35,976 - INFO - USB Formatted
+2023-05-02 12:44:36,493 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:36,757 - INFO - Authentication (password) successful!
+2023-05-02 12:44:36,918 - INFO - USB Ejected
+2023-05-02 12:44:37,435 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:37,691 - INFO - Authentication (password) successful!
+2023-05-02 12:44:37,890 - INFO - USB Reconnected
+2023-05-02 12:44:38,406 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:38,594 - INFO - Authentication (password) successful!
+2023-05-02 12:44:39,275 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:39,526 - INFO - Authentication (password) successful!
+2023-05-02 12:44:40,240 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:40,488 - INFO - Authentication (password) successful!
+2023-05-02 12:44:40,649 - INFO - USB Renamed
+2023-05-02 12:44:41,368 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:41,619 - INFO - Authentication (password) successful!
+2023-05-02 12:44:43,509 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:43,749 - INFO - Authentication (password) successful!
+2023-05-02 12:44:44,418 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:44,657 - INFO - Authentication (password) successful!
+2023-05-02 12:44:44,855 - INFO - USB Ejected
+2023-05-02 12:44:45,369 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-02 12:44:45,628 - INFO - Authentication (password) successful!
+2023-05-02 12:44:45,795 - INFO - USB Reconnected
+2023-05-02 12:44:45,796 - INFO - USB renamed to it's original name

@@ -1,0 +1,142 @@
+2023-05-04 16:35:49,937 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:35:50,180 - INFO - Authentication (password) successful!
+2023-05-04 16:35:50,812 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:35:51,047 - INFO - Authentication (password) successful!
+2023-05-04 16:35:51,214 - INFO - 
+2023-05-04 16:35:51,223 - INFO - ******************** usb_12_1.py Test Case Started ********************
+2023-05-04 16:35:51,740 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:35:51,975 - INFO - Authentication (password) successful!
+2023-05-04 16:35:52,158 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:35:52,415 - INFO - Authentication (password) successful!
+2023-05-04 16:35:52,844 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:35:53,079 - INFO - Authentication (password) successful!
+2023-05-04 16:35:53,287 - INFO - USB Unmounted
+2023-05-04 16:36:03,299 - INFO - p
+[?2004l
+Disk /dev/sdc: 29.79 GiB, 31981568000 bytes, 62464000 sectors
+Disk model: Flash Disk      
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+Device     Boot   Start     End Sectors  Size Id Type
+/dev/sdc1          2048 3907583 3905536  1.9G 83 Linux
+/dev/sdc2       3907584 7813119 3905536  1.9G 83 Linux
+
+[?2004hCommand (m for help): d
+[?2004l[?2004hPartition number (1,2, default 2): 
+[?2004l
+Partition 2 has been deleted.
+
+[?2004hCommand (m for help): d
+[?2004lSelected partition 1
+Partition 1 has been deleted.
+
+[?2004hCommand (m for help): 
+[?2004l
+
+[?2004hCommand (m for help): n
+[?2004lPartition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+[?2004hSelect (default p): 
+[?2004l
+Using default response p.
+[?2004hPartition number (1-4, default 1): 
+[?2004l[?2004hFirst sector (2048-62463999, default 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62463999, default 62463999): 
+[?2004l
+Created a new partition 1 of type 'Linux' and of size 29.8 GiB.
+Partition #1 contains a vfat signature.
+
+Do you want to remove the signature?[?2004h [Y]es/[N]o: Y
+[?2004l
+The signature will be removed by a write command.
+
+[?2004hCommand (m for help): t
+[?2004lSelected partition 1
+[?2004hHex code or alias (type L to list all): L
+[?2004l
+00 Empty            24 NEC DOS          81 Minix / old Lin  bf Solaris        
+01 FAT12            27 Hidden NTFS Win  82 Linux swap / So  c1 DRDOS/sec (FAT-
+02 XENIX root       39 Plan 9           83 Linux            c4 DRDOS/sec (FAT-
+03 XENIX usr        3c PartitionMagic   84 OS/2 hidden or   c6 DRDOS/sec (FAT-
+04 FAT16 <32M       40 Venix 80286      85 Linux extended   c7 Syrinx         
+05 Extended         41 PPC PReP Boot    86 NTFS volume set  da Non-FS data    
+06 FAT16            42 SFS              87 NTFS volume set  db CP/M / CTOS / .
+07 HPFS/NTFS/exFAT  4d QNX4.x           88 Linux plaintext  de Dell Utility   
+08 AIX              4e QNX4.x 2nd part  8e Linux LVM        df BootIt         
+09 AIX bootable     4f QNX4.x 3rd part  93 Amoeba           e1 DOS access     
+0a OS/2 Boot Manag  50 OnTrack DM       94 Amoeba BBT       e3 DOS R/O        
+0b W95 FAT32        51 OnTrack DM6 Aux  9f BSD/OS           e4 SpeedStor      
+0c W95 FAT32 (LBA)  52 CP/M             a0 IBM Thinkpad hi  ea Linux extended 
+0e W95 FAT16 (LBA)  53 OnTrack DM6 Aux  a5 FreeBSD          eb BeOS fs        
+0f W95 Ext'd (LBA)  54 OnTrackDM6       a6 OpenBSD          ee GPT            
+10 OPUS             55 EZ-Drive         a7 NeXTSTEP         ef EFI (FAT-12/16/
+11 Hidden FAT12     56 Golden Bow       a8 Darwin UFS       f0 Linux/PA-RISC b
+12 Compaq diagnost  5c Priam Edisk      a9 NetBSD           f1 SpeedStor      
+14 Hidden FAT16 <3  61 SpeedStor        ab Darwin boot      f4 SpeedStor      
+16 Hidden FAT16     63 GNU HURD or Sys  af HFS / HFS+       f2 DOS secondary  
+17 Hidden HPFS/NTF  64 Novell Netware   b7 BSDI fs          fb VMware VMFS    
+18 AST SmartSleep   65 Novell Netware   b8 BSDI swap        fc VMware VMKCORE 
+1b Hidden W95 FAT3  70 DiskSecure Mult  bb Boot Wizard hid  fd Linux raid auto
+1c Hidden W95 FAT3  75 PC/IX            bc Acronis FAT32 L  fe LANstep        
+1e Hidden W95 FAT1  80 Old Minix        be Solaris boot     ff BBT            
+
+Aliases:
+   linux          - 83
+   swap           - 82
+   extended       - 05
+   uefi           - EF
+   raid           - FD
+   lvm            - 8E
+   linuxex        - 85
+[?2004hHex code or alias (type L to list all): 07
+[?2004lChanged type of partition 'Linux' to 'HPFS/NTFS/exFAT'.
+
+[?2004hCommand (m for help): w
+[?2004lThe partition table has been altered.
+Failed to remove partition 2 from system: Device or resource busy
+Failed to update system information about partition 1: Device or resource busy
+
+The kernel still uses the old partitions. The new table will be used at the next reboot. 
+Syncing disks.
+
+[?2004hdemo@fubeus:~$ 
+2023-05-04 16:36:03,616 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:03,844 - INFO - Authentication (password) successful!
+2023-05-04 16:36:04,012 - INFO - USB Unmounted
+2023-05-04 16:36:04,529 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:04,769 - INFO - Authentication (password) successful!
+2023-05-04 16:36:06,001 - INFO - USB Formatted
+2023-05-04 16:36:06,518 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:06,747 - INFO - Authentication (password) successful!
+2023-05-04 16:36:07,438 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:07,677 - INFO - Authentication (password) successful!
+2023-05-04 16:36:07,866 - INFO - USB Ejected !!
+2023-05-04 16:36:08,379 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:08,608 - INFO - Authentication (password) successful!
+2023-05-04 16:36:08,780 - INFO - USB Reconnected !!
+2023-05-04 16:36:10,297 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:10,535 - INFO - Authentication (password) successful!
+2023-05-04 16:36:11,166 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:11,406 - INFO - Authentication (password) successful!
+2023-05-04 16:36:12,072 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:12,301 - INFO - Authentication (password) successful!
+2023-05-04 16:36:12,494 - INFO - USB Ejected !!
+2023-05-04 16:36:13,008 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:13,269 - INFO - Authentication (password) successful!
+2023-05-04 16:36:13,426 - INFO - USB Reconnected !!
+2023-05-04 16:36:13,427 - INFO - USB renamed to it's original name
+2023-05-04 16:36:13,949 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:14,189 - INFO - Authentication (password) successful!
+2023-05-04 16:36:14,898 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:15,137 - INFO - Authentication (password) successful!
+2023-05-04 16:36:15,340 - INFO - USB Ejected !!
+2023-05-04 16:36:15,852 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-05-04 16:36:16,034 - INFO - Authentication (password) successful!
+2023-05-04 16:36:16,189 - INFO - USB Reconnected !!
+2023-05-04 16:36:16,190 - INFO - ******************** usb_12_1.py Test Case Completed ********************
+
