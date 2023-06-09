@@ -7,7 +7,7 @@ print(f"{'*' * 20} USB RUN STARTED {'*' * 20}")
 start = time.time()
 
 list_ = []
-user_config_file = get_attr('./user_data/user_config.ini', 'user_config_file')
+user_config_file = get_attr('/user_data/user_config.ini', 'user_config_file')
 
 config = configparser.ConfigParser()
 config.read(user_config_file)
@@ -24,17 +24,17 @@ for i in config.items(section):
 try:
     for value in list_:
         create_config('TEST_CASES', 'pick_test', value, user_config_file)
-        subprocess.run(['python', f'./Testcases/{value}.py'], check=True)
+        subprocess.run(['python', f'/Testcases/{value}.py'], check=True)
 
 except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
 
 # To get all the paths of the log file in result dir
-path = Path('./results/')
-win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
+path = Path('/results/')
+win_paths = ['/results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
 
 # Merging all available log files into a single log
-with open('./output.log', 'w') as output_file:
+with open('/output.log', 'w') as output_file:
     for path in win_paths:
         if path.split('/')[-1].split('.')[0] in list_:
             content = open(path, 'r').read()
