@@ -26,6 +26,7 @@ pipeline {
                 sh '''
                 echo "doing TESTING stuff.."
                 pwd
+                ls
                 '''
             }
         }
