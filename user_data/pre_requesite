@@ -1,0 +1,10 @@
+Flask==2.3.2
+iniconfig==2.0.0
+paramiko==3.1.0
+py==1.11.0
+pycparser==2.21
+pyinstaller==5.10.1
+pytest==7.3.1
+requests==2.31.0
+setuptools==65.5.0
+simple-colors==0.1.5
