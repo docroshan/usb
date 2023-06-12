@@ -13,6 +13,8 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
+                python3 -m venv myenv
+                source myenv/bin/activate
                 python --version
                 cd ./user_data/
                 pip install -r requirements.txt
@@ -26,7 +28,6 @@ pipeline {
                 sh '''
                 echo "doing TESTING stuff.."
                 pwd
-                ls
                 python usb_run.py
                 '''
             }
