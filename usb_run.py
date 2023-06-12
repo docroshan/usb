@@ -30,22 +30,22 @@ except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
 
 # To get all the paths of the log file in result dir
-path = Path('./results/')
+path = Path('/results/')
 print(path)
 win_paths = []
 for i in path.iterdir():
     print(i)
     if i.suffix == '.log' and i.is_file():
-        print('./results/'+str(i).split('\\')[-1])
+        print('./'+str(i).split('\\')[-1])
 # win_paths = ['/results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
 # print(win_paths)
 
 # Merging all available log files into a single log
-with open('/output.log', 'w') as output_file:
-    for path in win_paths:
-        if path.split('/')[-1].split('.')[0] in list_:
-            content = open(path, 'r').read()
-            output_file.write(content)
+# with open('/output.log', 'w') as output_file:
+#     for path in win_paths:
+#         if path.split('/')[-1].split('.')[0] in list_:
+#             content = open(path, 'r').read()
+#             output_file.write(content)
 
 end = time.time()
 print(f"Total time taken:{str(round((end - start), 2))} sec")
