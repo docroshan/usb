@@ -7,7 +7,7 @@ print(f"{'*' * 20} USB RUN STARTED {'*' * 20}")
 start = time.time()
 
 list_ = []
-user_config_file = get_attr('/user_data/user_config.ini', 'user_config_file')
+user_config_file = get_attr('./user_data/user_config.ini', 'user_config_file')
 
 config = configparser.ConfigParser()
 config.read(user_config_file)
