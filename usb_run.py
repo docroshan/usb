@@ -24,7 +24,7 @@ for i in config.items(section):
 try:
     for value in list_:
         create_config('TEST_CASES', 'pick_test', value, user_config_file)
-        subprocess.run(['python', f'/home/jenkins/workspace/USB_Automation/Testcases/{value}.py'], check=True)
+        subprocess.run(['python', f'./Testcases/{value}.py'], check=True)
 
 except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
