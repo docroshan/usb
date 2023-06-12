@@ -24,16 +24,21 @@ for i in config.items(section):
 try:
     for value in list_:
         create_config('TEST_CASES', 'pick_test', value, user_config_file)
-        subprocess.run(['python', f'/Testcases/{value}.py'], check=True)
+        subprocess.run(['python', f'/home/jenkins/workspace/USB_Automation/Testcases/{value}.py'], check=True)
 
 except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
 
 # To get all the paths of the log file in result dir
-path = Path('/results/')
+path = Path('./results/')
 print(path)
-win_paths = ['/results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
-print(win_paths)
+win_paths = []
+for i in path.iterdir():
+    print(i)
+    if i.suffix == '.log' and i.is_file():
+        print('./results/'+str(i).split('\\')[-1])
+# win_paths = ['/results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
+# print(win_paths)
 
 # Merging all available log files into a single log
 with open('/output.log', 'w') as output_file:
