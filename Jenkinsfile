@@ -13,6 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
+                pip install utilities
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
@@ -28,9 +29,7 @@ pipeline {
                 PYTHON_PATH=$(which python)
                 echo $PYTHON_PATH
                 cd /usr/bin/
-                cat python
-                cat python3
-                cat python3.11
+                cd /var/
                 ls -a
                 '''
             }
