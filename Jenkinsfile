@@ -28,6 +28,9 @@ pipeline {
                 PYTHON_PATH=$(which python)
                 echo $PYTHON_PATH
                 cd /usr/bin/
+                cat python
+                cat python3
+                cat python3.11
                 ls -a
                 '''
             }
