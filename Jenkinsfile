@@ -13,7 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
-//                 pip install utilities
+                which site-packages
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
