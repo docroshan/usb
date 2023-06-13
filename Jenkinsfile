@@ -28,6 +28,7 @@ pipeline {
                 PYTHON_PATH=$(which python)
                 echo $PYTHON_PATH
                 cd /usr/bin/
+                ls -a
                 '''
             }
         }
