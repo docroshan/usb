@@ -25,7 +25,7 @@ pipeline {
                 sh '''
                 echo "doing TESTING stuff.."
                 python --version
-                which python && export PYTHON_PATH=$?
+                PYTHON_PATH=$(which python)
                 echo $PYTHON_PATH
                 '''
             }
