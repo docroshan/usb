@@ -27,6 +27,7 @@ pipeline {
                 python --version
                 PYTHON_PATH=$(which python)
                 echo $PYTHON_PATH
+                cd $PYTHON_PATH
                 '''
             }
         }
