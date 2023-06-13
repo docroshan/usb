@@ -13,7 +13,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
-                python --version
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
@@ -25,7 +24,8 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 echo "doing TESTING stuff.."
-                pwd
+                python --version
+                which python
                 '''
             }
         }
