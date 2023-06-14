@@ -562,7 +562,7 @@ if dev[0]:
         logger.critical("Config file not updated with current usb details\n")
         print("Config file not updated with current usb details\n")
 else:
-    print((dev[1])
+    print(dev[1])
     logger.error(dev[1])
     logger.critical("Config file not updated with current usb details\n")
     print("Config file not updated with current usb details\n")
