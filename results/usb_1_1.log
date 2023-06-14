@@ -1,0 +1,7 @@
+2023-06-13 16:14:55,236 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2023-06-13 16:14:57,061 - INFO - Authentication (password) failed.
+2023-06-13 16:14:57,061 - ERROR - Connection ERROR: Failed to connect the machine!!
+2023-06-13 16:14:57,061 - ERROR - No USB Devices Found or Device not Mounted
+2023-06-13 16:14:57,073 - ERROR - No USB Devices Found or Device not Mounted
+2023-06-13 16:14:57,073 - CRITICAL - Config file not updated with current usb details
+

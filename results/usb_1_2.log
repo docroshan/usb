@@ -1,0 +1,47 @@
+2023-06-01 12:16:30,507 - ERROR - Exception (client): Error reading SSH protocol banner
+2023-06-01 12:16:30,515 - ERROR - Traceback (most recent call last):
+2023-06-01 12:16:30,516 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2270, in _check_banner
+2023-06-01 12:16:30,516 - ERROR -     buf = self.packetizer.readline(timeout)
+2023-06-01 12:16:30,516 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-06-01 12:16:30,517 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 374, in readline
+2023-06-01 12:16:30,517 - ERROR -     buf += self._read_timeout(timeout)
+2023-06-01 12:16:30,517 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-06-01 12:16:30,517 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 611, in _read_timeout
+2023-06-01 12:16:30,518 - ERROR -     raise socket.timeout()
+2023-06-01 12:16:30,518 - ERROR - TimeoutError
+2023-06-01 12:16:30,518 - ERROR - 
+2023-06-01 12:16:30,518 - ERROR - During handling of the above exception, another exception occurred:
+2023-06-01 12:16:30,518 - ERROR - 
+2023-06-01 12:16:30,519 - ERROR - Traceback (most recent call last):
+2023-06-01 12:16:30,519 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2093, in run
+2023-06-01 12:16:30,519 - ERROR -     self._check_banner()
+2023-06-01 12:16:30,519 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2274, in _check_banner
+2023-06-01 12:16:30,519 - ERROR -     raise SSHException(
+2023-06-01 12:16:30,519 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2023-06-01 12:16:30,520 - ERROR - 
+2023-06-01 12:16:30,521 - ERROR - Connection ERROR: Failed to connect the machine!!
+2023-06-01 12:16:30,521 - ERROR - No USB Devices Found or Device not Mounted
+2023-06-01 12:16:46,063 - ERROR - Exception (client): Error reading SSH protocol banner
+2023-06-01 12:16:46,065 - ERROR - Traceback (most recent call last):
+2023-06-01 12:16:46,065 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2270, in _check_banner
+2023-06-01 12:16:46,066 - ERROR -     buf = self.packetizer.readline(timeout)
+2023-06-01 12:16:46,066 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-06-01 12:16:46,066 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 374, in readline
+2023-06-01 12:16:46,066 - ERROR -     buf += self._read_timeout(timeout)
+2023-06-01 12:16:46,066 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-06-01 12:16:46,067 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 611, in _read_timeout
+2023-06-01 12:16:46,067 - ERROR -     raise socket.timeout()
+2023-06-01 12:16:46,067 - ERROR - TimeoutError
+2023-06-01 12:16:46,067 - ERROR - 
+2023-06-01 12:16:46,067 - ERROR - During handling of the above exception, another exception occurred:
+2023-06-01 12:16:46,068 - ERROR - 
+2023-06-01 12:16:46,068 - ERROR - Traceback (most recent call last):
+2023-06-01 12:16:46,068 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2093, in run
+2023-06-01 12:16:46,068 - ERROR -     self._check_banner()
+2023-06-01 12:16:46,068 - ERROR -   File "C:\Users\rosha\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2274, in _check_banner
+2023-06-01 12:16:46,069 - ERROR -     raise SSHException(
+2023-06-01 12:16:46,069 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2023-06-01 12:16:46,069 - ERROR - 
+2023-06-01 12:16:46,070 - ERROR - Connection ERROR: Failed to connect the machine!!
+2023-06-01 12:16:46,070 - CRITICAL - Config file not updated with current usb details
+
