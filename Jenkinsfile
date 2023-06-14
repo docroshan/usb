@@ -30,9 +30,8 @@ pipeline {
                 PYTHON_PATH=$(which python)
                 pwd
                 cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
-                cd /home/jenkins/.local/lib/python3.11/site-packages
-                ls -a
                 ls -la /home/jenkins/.local/lib/python3.11/site-packages/utilities
+                py usb_run.py
                 python -m site --user-site
                 '''
             }
