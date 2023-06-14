@@ -28,7 +28,7 @@ pipeline {
                 echo "doing TESTING stuff.."
                 python usb_run.py
                 cat output.log
-                ls -la ./results
+                ls -la results
                 '''
             }
         }
