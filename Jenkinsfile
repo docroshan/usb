@@ -31,7 +31,7 @@ pipeline {
                 pwd
                 cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
                 ls -la /home/jenkins/.local/lib/python3.11/site-packages/utilities
-                py usb_run.py
+                python usb_run.py
                 python -m site --user-site
                 '''
             }
