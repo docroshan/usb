@@ -13,7 +13,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
-                which site-packages
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
@@ -30,6 +29,8 @@ pipeline {
                 echo $PYTHON_PATH
                 cd /usr/bin/
                 cd /var/
+                ls -a
+                cd /usr/
                 ls -a
                 '''
             }
