@@ -35,11 +35,11 @@ win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.su
 
 
 # Merging all available log files into a single log
-# with open('/output.log', 'w') as output_file:
-#     for path in win_paths:
-#         if path.split('/')[-1].split('.')[0] in list_:
-#             content = open(path, 'r').read()
-#             output_file.write(content)
+with open('/output.log', 'w') as output_file:
+    for path in win_paths:
+        if path.split('/')[-1].split('.')[0] in list_:
+            content = open(path, 'r').read()
+            output_file.write(content)
 
 end = time.time()
 print(f"Total time taken:{str(round((end - start), 2))} sec")
