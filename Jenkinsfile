@@ -13,11 +13,14 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing BUILDING stuff.."
-                FRAME_PATH=$(pwd)
-                ls -la
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
+                python --version
+                python -m site --user-site
+                PYTHON_PATH=$(which python)
+                cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
+                ls -la /home/jenkins/.local/lib/python3.11/site-packages/utilities
                 '''
             }
         }
@@ -26,13 +29,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 echo "doing TESTING stuff.."
-                python --version
-                PYTHON_PATH=$(which python)
-                pwd
-                cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
-                ls -la /home/jenkins/.local/lib/python3.11/site-packages/utilities
                 python usb_run.py
-                python -m site --user-site
                 '''
             }
         }
