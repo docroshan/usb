@@ -15,8 +15,6 @@ pipeline {
                 echo "doing BUILDING stuff.."
                 FRAME_PATH=$(pwd)
                 ls -la
-                cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
-                cp -r utilities /usr/lib/python3.11/site-packages/
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
