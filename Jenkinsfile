@@ -30,7 +30,7 @@ pipeline {
                 cd /usr/bin/
                 cd /var/
                 ls -a
-                cd /usr/lib/python3.11/
+                cd /usr/lib/python3.11/site-packages/
                 ls -a
                 python -m site --user-site
                 '''
