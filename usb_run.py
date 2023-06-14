@@ -3,7 +3,7 @@ import subprocess
 import time
 from utilities.parser_creation import *
 
-print(f"{'*' * 20} USB RUN STARTED {'*' * 20}")
+
 start = time.time()
 
 list_ = []
