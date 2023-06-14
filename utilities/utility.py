@@ -546,7 +546,7 @@ def fun_count(func):
     return wrapper
 
 
-logging.basicConfig(filename=f'results/{test_case}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
+logging.basicConfig(filename=f'./results/{test_case}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 logger.setLevel(logging.INFO)
