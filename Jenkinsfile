@@ -30,7 +30,7 @@ pipeline {
                 cd /usr/bin/
                 cd /var/
                 ls -a
-                cd /usr/
+                cd /usr/lib/
                 ls -a
                 '''
             }
