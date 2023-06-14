@@ -76,8 +76,8 @@ def ssh_connect(ip, user_name, password):
         return 0
 
     except:
-        print('Connection ERROR: Failed to connect the machine!!')
-        logger.error('Connection ERROR: Failed to connect the machine!!')
+        print('Connection ERROR: Failed to connect the machine !!')
+        logger.error('Connection ERROR: Failed to connect the machine !!')
         return 0
     return ssh
 
@@ -560,9 +560,9 @@ if dev[0]:
 
     except AttributeError:
         logger.critical("Config file not updated with current usb details\n")
-        print(red("Config file not updated with current usb details\n"))
+        print("Config file not updated with current usb details\n")
 else:
-    print(red(dev[1]))
+    print(dev[1])
     logger.error(dev[1])
     logger.critical("Config file not updated with current usb details\n")
-    print(red("Config file not updated with current usb details\n"))
+    print("Config file not updated with current usb details\n")
