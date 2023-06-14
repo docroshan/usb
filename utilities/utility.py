@@ -13,7 +13,7 @@ from time import sleep
 import logging
 from utilities.reports import *
 
-
+print('*' * 30, "RUN STARTED", '* * 30)
 # User inputs
 user_config_file = get_attr('./user_data/user_config.ini', 'user_config_file')
 
