@@ -14,8 +14,15 @@ import logging
 from utilities.reports import *
 
 print('*' * 30, "RUN STARTED", '*' * 30)
+
 # User inputs
 user_config_file = get_attr('./user_data/user_config.ini', 'user_config_file')
+test_case = get_attr(user_config_file, 'pick_test')
+
+logging.basicConfig(filename=f'./results/{test_case}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
+logger = logging.getLogger()
+logger.setLevel(logging.ERROR)
+logger.setLevel(logging.INFO)
 
 # SSH/Login Details
 user_name = get_attr(user_config_file, 'user_name')
@@ -58,9 +65,6 @@ mount_point = get_attr(dev_config_file, 'mount_point')
 mount_point_loc = get_attr(dev_config_file, 'mount_point_loc')
 partitions_number = get_attr(dev_config_file, 'partitions_number')
 partition_size = get_attr(dev_config_file, 'partition_size')
-
-
-test_case = get_attr(user_config_file, 'pick_test')
 
 
 def ssh_connect(ip, user_name, password):
@@ -545,11 +549,6 @@ def fun_count(func):
         return func
     return wrapper
 
-
-logging.basicConfig(filename=f'./results/{test_case}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
-logger = logging.getLogger()
-logger.setLevel(logging.ERROR)
-logger.setLevel(logging.INFO)
 
 dev = devpath()
 if dev[0]:
