@@ -31,7 +31,7 @@ except subprocess.CalledProcessError:
 
 # To get all the paths of the log file in result dir
 path = Path('./results/')
-win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
+win_paths = ['./'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
 
 
 # Merging all available log files into a single log
