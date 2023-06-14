@@ -30,7 +30,6 @@ pipeline {
                 PYTHON_PATH=$(which python)
                 pwd
                 cp -r utilities /home/jenkins/.local/lib/python3.11/site-packages/
-                cp -r utilities /usr/lib/python3.11/site-packages/
                 cd /usr/lib/python3.11/site-packages/
                 ls -a
                 cd /home/jenkins/.local/lib/python3.11/site-packages
