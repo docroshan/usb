@@ -14,6 +14,7 @@ pipeline {
                 sh '''
                 echo "doing BUILDING stuff.."
                 FRAME_PATH=$(pwd)
+                ls -la
                 cd ./user_data/
                 pip install -r requirements.txt
                 cd ..
@@ -27,7 +28,6 @@ pipeline {
                 echo "doing TESTING stuff.."
                 python --version
                 PYTHON_PATH=$(which python)
-                echo $FRAME_PATH
                 pwd
                 cd /usr/lib/python3.11/site-packages/
                 ls -a
