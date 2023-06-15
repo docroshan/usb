@@ -30,7 +30,7 @@ except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
 
 # Getting all the paths of the log file in 'results' directory
-path = Path('./results/')
+path = Path('results')
 win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
 
 # Merging current running Test cases log files into a single output-log
