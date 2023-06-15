@@ -32,13 +32,14 @@ except subprocess.CalledProcessError:
 # Getting all the paths of the log file in 'results' directory
 path = Path('results')
 win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
+print(win_paths)
 
-# Merging current running Test cases log files into a single output-log
-with open('output.log', 'w') as output_file:
-    for path in win_paths:
-        if path.split('/')[-1].split('.')[0] in list_:
-            content = open(path, 'r').read()
-            output_file.write(content)
+# # Merging current running Test cases log files into a single output-log
+# with open('output.log', 'w') as output_file:
+#     for path in win_paths:
+#         if path.split('/')[-1].split('.')[0] in list_:
+#             content = open(path, 'r').read()
+#             output_file.write(content)
 
 end = time.time()
 print(f"Total time taken:{str(round((end - start), 2))} sec")
