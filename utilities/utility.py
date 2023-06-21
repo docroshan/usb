@@ -198,15 +198,25 @@ def usb_eject():
 # To eject the USB
 def usb_reconnect():
     super_access(password, f"eject -t {dev[:len(dev) - 1]}")
-    d = super_access(password, f"df | grep {dev}")
-    if d:
+    if super_access(password, f"df | grep {dev}"):
         logger.info('USB Reconnected !!')
         print(green('USB Re-Connected !!'))
         return 1
     else:
-        print(red("No USB Found !!"))
-        logger.error('No USB FOUND !!')
+        print(red("NO USB Found !!"))
+        logger.error('NO USB FOUND !!')
         return 0
+    # elif super_access(password, f'mount {dev} /mnt/{user_name}/{current_usb_name}'):
+    # super_access(password, f'mount {dev} /mnt/{user_name}/{current_usb_name}')
+    # if super_access(password, f"df | grep {dev}"):
+    #     logger.info('USB Reconnected !!')
+    #     print(green('USB Re-Connected !!'))
+    #     return 1
+    # else:
+    #     super_access(password, f'mount {dev} /mnt/{user_name}/{current_usb_name}')
+    #     logger.info('USB Reconnected !!')
+    #     print(green('USB Re-Connected !!'))
+    #     return 1
 
 
 # To Safely eject the USB
@@ -551,6 +561,7 @@ def fun_count(func):
 
 
 dev = devpath()
+
 if dev[0]:
     try:
         current_usb_name = super_access(password, f"mlabel -i {dev} -s").strip().split()[-1]
@@ -560,8 +571,10 @@ if dev[0]:
     except AttributeError:
         logger.critical("Config file not updated with current usb details\n")
         print("Config file not updated with current usb details\n")
+        sys.exit()
 else:
     print(dev[1])
     logger.error(dev[1])
     logger.critical("Config file not updated with current usb details\n")
     print("Config file not updated with current usb details\n")
+    sys.exit()
