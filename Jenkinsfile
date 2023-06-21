@@ -26,13 +26,9 @@ pipeline {
                 echo "Testing..."
                 sh '''
                 echo "doing TESTING stuff.."
-                ls -l
                 mkdir results
-                ls -l
                 python usb_run.py
-                ls -la results
                 cat output.log
-                ls -la
                 '''
             }
         }
