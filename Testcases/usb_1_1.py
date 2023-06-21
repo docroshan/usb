@@ -49,4 +49,4 @@ def get_usb_name():
         return 'FAIL', 'Name mis-matched'
 
 
-# get_usb_name()
+get_usb_name()
