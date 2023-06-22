@@ -50,4 +50,4 @@ def usb_version():
         return 'FAIL', 'Port Version Mis-matched'
 
 
-# usb_version()
+usb_version()
