@@ -49,4 +49,4 @@ def usb_mount_point():
         return 'FAIL', 'Mount Point mis-matched'
 
 
-# usb_mount_point()
+usb_mount_point()
