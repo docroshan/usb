@@ -28,6 +28,7 @@ pipeline {
                 echo "doing TESTING stuff.."
                 mkdir results
                 python usb_run.py
+                docker cp dba17d5b8e4e:output.log /tmp/output.log
                 cat output.log
                 '''
             }
