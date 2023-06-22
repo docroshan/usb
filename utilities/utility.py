@@ -549,7 +549,7 @@ def fun_count(func):
         res = func(*args, **kwargs)  # (Pass, None)or(Fail, Reason/Remarks)
         csv_data[func.__name__] += [count, res[0], res[1]]
 
-        with open(f'./{test_case}.csv', mode='w', newline='') as file:
+        with open(f'./results/{test_case}.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['Testcase No.', 'Testcase Name', 'Status', 'Remarks'])
             for func_name, num in csv_data.items():
