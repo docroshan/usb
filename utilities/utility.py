@@ -19,7 +19,10 @@ print('*' * 30, "RUN STARTED", '*' * 30)
 user_config_file = get_attr('./user_data/user_config.ini', 'user_config_file')
 test_case = get_attr(user_config_file, 'pick_test')
 
-logging.basicConfig(filename=f'./results/{test_case}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
+with open(f'./Testcases/{test_case}.py', 'r') as f:
+    testcase_name = f.readlines()[-1][:-3]
+
+logging.basicConfig(filename=f'./results/{testcase_name}.log', format='%(asctime)s - %(levelname)s - %(message)s', filemode='w')
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 logger.setLevel(logging.INFO)
@@ -526,36 +529,34 @@ count = 0
 csv_data = defaultdict(list)
 
 
-def pass_fail():
-    _fail = 0
-    _pass = 0
-    for testcase, num in csv_data.items():
-        if num[1].upper() == 'FAIL':
-            _fail += 1
-        else:
-            _pass += 1
-
-    with open(f'./results/{test_case}.csv', mode='a', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(('Total number of TestCases', len(csv_data)))
-        writer.writerow(['Total Pass TestCases', _pass])
-        writer.writerow(['Total Fail TestCases', _fail])
+# def pass_fail():
+#     _fail = 0
+#     _pass = 0
+#     for testcase, num in csv_data.items():
+#         if num[1].upper() == 'FAIL':
+#             _fail += 1
+#         else:
+#             _pass += 1
+#
+#     with open(f'./results/{test_case}.csv', mode='a', newline='') as file:
+#         writer = csv.writer(file)
+#         writer.writerow(('Total number of TestCases', len(csv_data)))
+#         writer.writerow(['Total Pass TestCases', _pass])
+#         writer.writerow(['Total Fail TestCases', _fail])
 
 
 def fun_count(func):
     def wrapper(*args, **kwargs):
         global count
         count += 1
-        res = func(*args, **kwargs)  # (Pass, None)or(Fail, Reason/Remarks)
-        csv_data[func.__name__] += [count, res[0], res[1]]
-
+        res = func(*args, **kwargs)
+        tc_name = func.__name__
+        csv_data[tc_name] += [count, res[0], res[1]]
         with open(f'./results/{test_case}.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Testcase No.', 'Testcase Name', 'Status', 'Remarks'])
+            writer.writerow(['TestCase No.', 'TestCase Name', 'Status', 'Remarks'])
             for func_name, num in csv_data.items():
                 writer.writerow([num[0], func_name.upper(), num[1], num[-1]])
-        pass_fail()
-        html_reports()
         return func
     return wrapper
 
