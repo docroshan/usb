@@ -3,7 +3,7 @@ import csv
 
 def html_reports():
     # Open the CSV file for reading
-    with open('./testresult.csv', 'r') as file:
+    with open('testresult.csv', 'r') as file:
         # Create a CSV reader object
         reader = list(csv.reader(file))
         # Create the HTML table
