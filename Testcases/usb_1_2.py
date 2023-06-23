@@ -12,10 +12,7 @@ def usb_mount_point():
 
     sleep(0.7)
 
-    ssh = ssh_connect(ip, user_name, password)
-    stdin, stdout, stderr = ssh.exec_command(f'df | grep {dev}')
-
-    d = stdout.read().decode().split('% ')[-1].strip()
+    d = super_access(password, f'df | grep {dev}').split()[-1]
     flag = 0
 
     print("Expected Results:", yellow(mount_point))
