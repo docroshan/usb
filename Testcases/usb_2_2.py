@@ -17,7 +17,7 @@ def usb_available_space():
             print(f"Available space of USB is {green(available_storage)}")
             logger.info(f"Available space of USB is {available_storage}")
             print(f"Expected result of of USB is {red(res[usbname]['Avail'])}\n")
-            error_msg = f"Available space of USB is {available_storage}, Expected result of of USB is {res[usbname]['Avail']}"
+            error_msg = f"Available space of USB is {available_storage} Expected result of of USB is {res[usbname]['Avail']}"
             logger.info(f"Expected result of of USB is {res[usbname]['Avail']}\n")
             print(red("FAIL"))
             logger.error("FAIL")
