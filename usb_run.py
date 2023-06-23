@@ -45,6 +45,7 @@ with open('./results/testresult.csv', 'w', newline='') as f1:
         with open(f'./results/{tc}.csv', 'r') as f:
             lines = f.readlines()
             for i in lines[1:]:
+                print(i)
                 number, tc_name, status, reason = i.split(',')
                 count += int(number)
                 writer.writerow([count, tc_name, status, reason.strip('\n')])
