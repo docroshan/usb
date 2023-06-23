@@ -5,7 +5,7 @@ from utilities.usb import *
 def get_usb_name():
     global d
 
-    print(f"{'*' * 20} {cyan(os.path.basename(__file__))} Test Case Started {'*' * 20}")
+    print(f"{'*' * 20} {os.path.basename(__file__)} Test Case Started {'*' * 20}")
     logger.info(f"{'*' * 20} {os.path.basename(__file__)} Test Case Started {'*' * 20}")
 
     usb = USB(password, usb_name)
@@ -16,31 +16,31 @@ def get_usb_name():
     try:
         d = super_access(password, f"mlabel -i {dev} -s").strip().split()[-1]
     except AttributeError:
-        print(red("No USB Found !!"))
+        print("No USB Found !!")
 
-    print("Expected Results:", yellow(usb_name))
+    print("Expected Results:", usb_name)
     logger.info(f"Expected Results:{usb_name}")
 
-    print("Actual Results:", green(d.lower()))
+    print("Actual Results:", d.lower())
     logger.info(f"Actual Results:{d.lower()}")
 
     try:
         assert d.lower() == usb_name.lower()
-        print(yellow("Name matched !!"))
-        print(green("\n\tPass\n"))
+        print("Name matched !!")
+        print("\n\tPass\n")
         logger.info("Name matched !!\n")
         logger.info("\tPASS\n")
         flag += 1
 
     except AssertionError:
-        print(red("Name mis-matched !!"))
-        print(red("\n\tFAIL\n"))
+        print("Name mis-matched !!")
+        print("\n\tFAIL\n")
         logger.error("Name mis-matched !!")
         logger.error("\tFail\n")
 
     usb_rename_to_original()
 
-    print("*" * 20, cyan(os.path.basename(__file__)), "Test Case Completed", "*" * 20, "\n")
+    print("*" * 20, os.path.basename(__file__), "Test Case Completed", "*" * 20, "\n")
     logger.info(f"{'*' * 20} {os.path.basename(__file__)} Test Case Completed {'*' * 20}\n")
 
     if flag:
