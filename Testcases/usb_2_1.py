@@ -18,7 +18,7 @@ def usb_capacity():
             print(f"Actual Capacity of USB is {green(total_storage)}")
             logger.info(f"Actual Capacity of USB is {total_storage}")
             print(f"Expected result of of USB is {red(res[usbname]['Size'])}\n")
-            error_msg = f'''Actual Capacity of USB is {total_storage}, Expected result of of USB is {res[usbname]['Size']}'''
+            error_msg = f"Actual Capacity of USB is {total_storage} Expected result of of USB is {res[usbname]['Size']}"
             logger.info(f"Expected result of of USB is {res[usbname]['Size']}\n")
             print(red("FAIL"))
             logger.error("FAIL")
