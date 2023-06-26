@@ -23,13 +23,24 @@ for i in config.items(section):
             list_ += [i[0]]
 
 try:
+    open('output.log', 'w')
     for value in list_:
         create_config('TEST_CASES', 'pick_test', value, user_config_file)
         subprocess.run(['python', f'Testcases/{value}.py'], check=True)
-    # Getting all the paths of the log file in 'results' directory
-    path = Path('results')
-    win_paths = ['./'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
-    print('Log File Paths:', win_paths)
+
+        # Getting all the paths of the log file in 'results' directory
+        # path = Path('results')
+        # win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
+
+        # Merging current running Test cases log files into a single output-log
+        with open('output.log', 'a') as output_file:
+            # for path in win_paths:
+            with open(f'./Testcases/{value}.py', 'r') as f:
+                testcase_name = f.readlines()[-1][:-3]
+            content = open(f'./results/{testcase_name}.log', 'r').read()
+            output_file.write(content)
+
+    # print('Log File Paths:', win_paths)
 
     # for reading each testcase csv result and creating one csv file
     count = 0
@@ -49,12 +60,7 @@ try:
                 pass
 
     html_reports()
-    
-    # Merging current running Test cases log files into a single output-log
-    with open('output.log', 'w') as output_file:
-        for path in win_paths:
-            content = open(path, 'r').read()
-            output_file.write(content)
+
 
 except subprocess.CalledProcessError:
     print('Unable to run File or File Not Found')
