@@ -23,24 +23,15 @@ for i in config.items(section):
             list_ += [i[0]]
 
 try:
-    open('output.log', 'w')
+    open('output.log', 'w')  # Creating output.log file
     for value in list_:
         create_config('TEST_CASES', 'pick_test', value, user_config_file)
         subprocess.run(['python', f'Testcases/{value}.py'], check=True)
 
-        # Getting all the paths of the log file in 'results' directory
-        # path = Path('results')
-        # win_paths = ['./results/'+str(i).split('\\')[-1] for i in path.iterdir() if i.suffix == '.log' and i.is_file()]
-
-        # Merging current running Test cases log files into a single output-log
-        with open('output.log', 'a') as output_file:
-            # for path in win_paths:
-            with open(f'./Testcases/{value}.py', 'r') as f:
-                testcase_name = f.readlines()[-1][:-3]
-            content = open(f'./results/{testcase_name}.log', 'r').read()
-            output_file.write(content)
-
-    # print('Log File Paths:', win_paths)
+        # Merging current running Test cases logs into a single output-log
+        testcase_name = open(f'./Testcases/{value}.py', 'r').readlines()[-1][:-3]  # Fetching function name
+        content = open(f'./results/{testcase_name}.log', 'r').read() # Fetching contents of individual logs
+        open('output.log', 'a').write(content)  # appending logs
 
     # for reading each testcase csv result and creating one csv file
     count = 0
